@@ -1,0 +1,13 @@
+1. Top left Triangle:
+(200, 150), (200, 450), (600, 150)
+
+Bottom right Triangle:
+(600, 150), (200, 450), (600, 450)
+
+2. If point A is top left, B is top right, C is bottom right, D is bottom left, we can use an index buffer {A, D, B} {B, D, C} to form the two triangles. Without an index buffer, we need 6 vertices, so the memory usage is 6 × 2 × 4 = 48 bytes, but with an index buffer, we need 4 vertices and 6 indices, so the total is 4 × 2 × 4 + 6 × 4 = 56 bytes.
+In this case, the index buffer actually uses more memory. It becomes more useful when vertices are shared by more triangles, since we don't need to store the same vertex multiple times. If we use doubles instead of floats, the memory usage becomes 96 bytes without indices and 88 bytes with indices. So using an index buffer saves memory in this case.
+
+3. The rectangle goes from (200, 150) to (600, 450), so its width is 400 and its height is 300.
+u = (500 - 200) / 400 = 0.75
+v = (301 - 150) / 300 ≈ 0.5033
+Therefore, the normalized UV coordinates are (0.75, 0.5033).

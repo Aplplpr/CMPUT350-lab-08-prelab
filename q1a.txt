@@ -1,0 +1,1 @@
+When the x-axis points right and the y-axis points down, increasing theta produces a clockwise rotation. When the y-axis points up, increasing theta produces a counterclockwise rotation. This is because a positive 90-degree rotation transforms (1, 0) into (0, 1).
